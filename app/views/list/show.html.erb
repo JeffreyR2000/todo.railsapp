@@ -1,19 +1,10 @@
 <ul>
-  <h2><%= @todo_description %></h2>
+  <h2><%= @list_name %></h2>
   <% @todo_description.each do |todo_desc| %>
   <li>
     <input type="checkbox"></input>
-    <span>Complete all missed assignments - Physics</span>
+    <span><%= todo_desc %></span>
     
   </li>
-  <li>
-    <input type="checkbox"></input>
-    <span>Study rehtoric section for quiz - Communications</span>
-    
-  </li>
-  <li>
-    <input type="checkbox"></input>
-    <span>Complete lab assignment #4 - AP Computer Science</span>
-    
-  </li>
+  <%end%>
 </ul>
