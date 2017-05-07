@@ -44,4 +44,20 @@ class ListController < ApplicationController
       
       @list = List.find_by_id(@id)
     end
+    def update
+      @name = params['name']
+      @id = params['id']
+      @list = List.find_by_id(@id)
+      @list.name = @name
+      @list.save
+      
+       redirect_to "/list/#{@list.id}"
+    end
+    def delete
+      @id = params['id']
+      @list = List.find_by_id(@id)
+      @list.delete
+      
+      redirect_to '/list/index'
+    end
 end

@@ -11,7 +11,11 @@ Rails.application.routes.draw do
   
   get 'list/create'
   
+  get 'list/update/:id' => 'list#update'
+  
   get 'list/edit/:id' => 'list#edit'
+  
+  get 'list/delete/:id' => 'list#delete'
   
   get 'list/:id' => 'list#show'
 
