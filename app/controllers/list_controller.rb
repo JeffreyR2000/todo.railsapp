@@ -6,8 +6,20 @@ class ListController < ApplicationController
     def second
     end
     def show
-      @list_name = 'Chores'
-      @todo_descriptions = ['laundry', 'Vaccum room', 'go to school']
       @id = params['id']
+      
+      if @id == 1
+        @list_name = 'Chores'
+        @todo_desc_1 = 'laundry'
+        @todo_desc_2 = 'clean room'
+      elsif @id == 2
+        @list_name = 'homework'
+        @todo_desc_1 = 'write english paper'
+        @todo_desc_2 = 'do math homework'
+      else 
+        @list_name = 'nothing'
+        @todo_desc_1 = 'you are free'
+        @todo_desc_2 = 'nevermind you have an essay'
+      end
     end
 end
