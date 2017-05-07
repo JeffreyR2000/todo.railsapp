@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   get 'list/index'
   get 'list/show'
-
+  get 'list/first'
+  get 'list/second'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
