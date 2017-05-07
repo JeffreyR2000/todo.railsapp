@@ -39,5 +39,9 @@ class ListController < ApplicationController
       
       redirect_to "/list/#{@list.id}"
     end
+    def edit
+       @id = params['id']
+      
+      @list = List.find_by_id(@id)
+    end
 end
-
