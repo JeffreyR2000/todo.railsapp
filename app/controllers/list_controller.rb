@@ -8,11 +8,13 @@ class ListController < ApplicationController
     def show
       @id = params['id']
       
-      if @id == 1
+      @list = List.find_by_id(@id)
+      
+      if @id == '1'
         @list_name = 'Chores'
         @todo_desc_1 = 'laundry'
         @todo_desc_2 = 'clean room'
-      elsif @id == 2
+      elsif @id == '2'
         @list_name = 'homework'
         @todo_desc_1 = 'write english paper'
         @todo_desc_2 = 'do math homework'
