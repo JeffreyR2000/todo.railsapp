@@ -1,10 +1,13 @@
 class ListController < ApplicationController
     def index
     end
+    
     def first 
     end
+    
     def second
     end
+    
     def show
       @id = params['id']
       
@@ -24,4 +27,17 @@ class ListController < ApplicationController
         @todo_desc_2 = 'nevermind you have an essay'
       end
     end
+    
+    def new
+    end
+    
+    def create
+      @name = params['name']
+      @list=List.new
+      @list.name = @name
+      @list.save
+      
+      redirect_to "/list/#{@list.id}"
+    end
 end
+
